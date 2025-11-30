@@ -1,15 +1,11 @@
-module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./src/**/*.{ts,tsx,js,jsx}",
+  ],
   theme: {
-    extend: {
-      colors: {
-        gold: "#F4D06F"
-      },
-      fontFamily: {
-        display: ["'Playfair Display'", "serif"],
-        sans: ["Inter", "sans-serif"]
-      }
-    }
+    extend: {},
   },
-  plugins: []
+  plugins: [],
 };
+
