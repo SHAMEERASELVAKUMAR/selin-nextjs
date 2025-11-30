@@ -9,7 +9,12 @@ import ChatButton from "@/components/ChatButton";
 
 export default function Page() {
   return (
-    <main className="bg-black min-h-screen">
+    <main className="relative overflow-hidden min-h-screen">
+      {/* star layers */}
+      <div className="starfield" />
+      <div className="planet" style={{ left: '6%', top: '60%' }} />
+      <div className="planet" style={{ right: '6%', top: '8%', width: 320, height: 320 }} />
+
       <Navbar />
       <Hero />
       <Funding />

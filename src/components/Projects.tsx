@@ -1,24 +1,28 @@
 export default function Projects() {
-  const items = [
-    { title: "Selin AI Chat", desc: "Next-gen conversational intelligence" },
-    { title: "Selin Cloud", desc: "Distributed GPU inference platform" },
-    { title: "Selin OS", desc: "AI-native operating system" },
-  ];
-
   return (
-    <section id="projects" className="py-28 max-w-7xl mx-auto px-6">
-      <h2 className="text-4xl font-display text-center mb-12">PROJECTS</h2>
+    <section id="projects" className="py-16 px-6">
+      <div className="center-max grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 className="text-3xl font-display mb-6">SELIN GROUP PROJECTS</h3>
+          <ul className="space-y-4">
+            <li className="card p-4">SELIN CONSULTANCY (PREMIUM SERVICES)</li>
+            <li className="card p-4">SELIN FINTECH (PRE-SEED STAGE)</li>
+            <li className="card p-4">TECH ENABLED LOGISTICS IMPORT/EXPORT</li>
+            <li className="card p-4">HEALTHCARE TECH INNOVATIONS</li>
+          </ul>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {items.map((p) => (
-          <div
-            key={p.title}
-            className="border border-white/10 bg-white/5 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/10 transition"
-          >
-            <h3 className="text-xl font-bold text-gold">{p.title}</h3>
-            <p className="mt-3 text-gray-400">{p.desc}</p>
+        <div className="card p-8">
+          <h4 className="text-sm text-gold uppercase">FOUNDER'S VISION</h4>
+          <blockquote className="font-display text-xl md:text-2xl mt-4 italic">
+            "IF SOMETHING CAN BE BUILT WITH DISCIPLINE, DESIRE, AND THE RIGHT PEOPLE, IT WILL BECOME BIG..."
+          </blockquote>
+
+          <div className="mt-6">
+            <div className="font-semibold">SARAN S I</div>
+            <div className="text-gray-400 text-sm">FOUNDER, SELIN GROUP</div>
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );

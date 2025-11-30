@@ -1,21 +1,113 @@
-@import "tailwindcss";
+/* Tailwind v4 style import via adapter plugin */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700;900&display=swap');
 
-:root {
+:root{
   --gold: #F4D06F;
   --bg: #050505;
 }
 
-html, body {
-  background: radial-gradient(circle at 20% 80%, rgba(120,40,0,0.08), var(--bg));
-  color: white;
-  margin: 0;
-  padding: 0;
+/* Global */
+html,body,#__next {
+  height:100%;
+}
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(circle at 20% 80%, rgba(120,40,0,0.06), var(--bg));
+  color: #fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
+/* serif display helper */
 .font-display {
   font-family: "Playfair Display", serif;
 }
+
+/* GOLD TEXT GRADIENT */
+.text-gold {
+  background: linear-gradient(180deg, #ffd970 10%, #b5863d 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* glow button */
+.btn-gold {
+  background: linear-gradient(180deg, rgba(244,208,111,1), rgba(206,165,68,1));
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  box-shadow: 0 6px 40px rgba(244,208,111,0.22), 0 0 18px rgba(244,208,111,0.18) inset;
+}
+
+/* subtle card border + glow */
+.card {
+  background: rgba(6,6,6,0.6);
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+}
+
+/* gold outline for hero CTA */
+.hero-cta {
+  border: 4px solid rgba(255,255,255,0.9);
+  box-shadow: 0 20px 60px rgba(244,208,111,0.16);
+}
+
+/* chat bubble */
+.chat-bubble {
+  width:72px;
+  height:72px;
+  border-radius:9999px;
+  border: 2px solid rgba(244,208,111,0.9);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 10px 40px rgba(244,208,111,0.12), 0 0 40px rgba(244,208,111,0.08);
+}
+
+/* ---- STARFIELD (css) ----
+   a thin animated layer of tiny dots that pan slowly
+*/
+.starfield {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.9) 1px, transparent 1px),
+    radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px);
+  background-size: 3px 3px, 6px 6px;
+  opacity: 0.55;
+  transform: translateZ(0);
+  animation: starMove 120s linear infinite;
+}
+
+@keyframes starMove {
+  from { background-position: 0 0, 0 0; }
+  to   { background-position: -2000px 2000px, -1000px 1000px; }
+}
+
+/* subtle planets / large dark glows */
+.planet {
+  position: absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, rgba(160,80,40,0.16), rgba(0,0,0,0.0) 60%);
+  filter: blur(30px);
+  mix-blend-mode: screen;
+  pointer-events:none;
+}
+
+/* responsive hero headline sizes */
+.h1-lg { font-size: clamp(3rem, 9vw, 6.2rem); line-height: 0.9;}
+.h1-med { font-size: clamp(2rem, 5.5vw, 3.6rem); }
+
+/* small util */
+.center-max { max-width: 1120px; margin: 0 auto; }
 

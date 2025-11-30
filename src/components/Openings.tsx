@@ -1,7 +1,11 @@
-const openings = [
-  { title: "AI/ML Engineer", sub: "Python, LLMs, RAG", seats: 2 },
-  { title: "Backend Architect", sub: "Node.js, Firebase, Cloud", seats: 2 },
-  { title: "Frontend / Mobile", sub: "React, Next.js, Flutter", seats: 2 },
+"use client";
+const list = [
+  { title: "AI/ML ENGINEER", meta: "PYTHON, LLMS, RAG, PYTORCH", seats: 2 },
+  { title: "BACKEND ARCHITECT", meta: "NODE.JS, FIREBASE, CLOUD FUNCTIONS", seats: 2 },
+  { title: "FRONTEND / MOBILE", meta: "REACT, FLUTTER, TAILWIND", seats: 2 },
+  { title: "OCR & VISION SPECIALIST", meta: "OPENCV, TESSERACT, DOCUMENT AI", seats: 1 },
+  { title: "PRODUCT DESIGNER", meta: "FIGMA, UX FLOWS", seats: 1 },
+  { title: "OPERATIONS LEAD", meta: "AGILE, TEAM MANAGEMENT", seats: 1 },
 ];
 
 const formUrl =
@@ -9,31 +13,25 @@ const formUrl =
 
 export default function Openings() {
   return (
-    <section id="openings" className="py-28 px-6 max-w-7xl mx-auto">
-      <h2 className="text-4xl font-display text-center">CURRENT OPENINGS</h2>
+    <section id="openings" className="py-16 px-6">
+      <div className="center-max">
+        <h3 className="text-3xl font-display text-center mb-8">CURRENT OPENINGS</h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
-        {openings.map((o) => (
-          <div
-            key={o.title}
-            className="border border-white/10 bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition"
-          >
-            <h3 className="text-xl font-bold">{o.title}</h3>
-            <p className="text-gray-400 text-sm mt-1">{o.sub}</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {list.map((l) => (
+            <div key={l.title} className="p-6 card rounded-md flex flex-col justify-between h-44">
+              <div>
+                <h4 className="text-lg font-bold">{l.title}</h4>
+                <div className="text-gray-400 text-xs mt-2">{l.meta}</div>
+              </div>
 
-            <div className="mt-6 flex justify-between items-center">
-              <span className="text-gold font-semibold">{o.seats} Seats</span>
-
-              <a
-                href={formUrl}
-                target="_blank"
-                className="underline text-gray-300 hover:text-white"
-              >
-                Apply
-              </a>
+              <div className="flex justify-between items-center mt-4">
+                <div className="text-gold font-semibold">{l.seats} SEATS AVAILABLE</div>
+                <a href={formUrl} target="_blank" rel="noreferrer" className="underline">APPLY</a>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

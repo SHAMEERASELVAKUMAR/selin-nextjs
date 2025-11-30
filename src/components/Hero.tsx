@@ -1,30 +1,37 @@
+"use client";
 const formUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSe9J9P-YN3-_uhEsMDG8iJxWExj6KnX_if8FTol4Fbes85WEQ/viewform";
 
 export default function Hero() {
   return (
-    <section className="pt-40 pb-32 text-center">
-      <div className="inline-block px-5 py-1 bg-white/5 border border-white/10 text-xs text-gray-300 rounded-full tracking-widest">
-        ● SELIN VENTURES
+    <section className="pt-28 pb-28 text-center relative">
+      <div className="center-max px-6">
+        <div className="inline-block px-4 py-1 bg-black/60 border border-gray-700 text-sm text-gray-300 mb-6 rounded-full">
+          ● SELIN'S AI VISION
+        </div>
+
+        <h1 className="font-display font-extrabold h1-lg leading-tight tracking-tight mx-auto">
+          <span className="text-white block">JOIN THE</span>
+          <span className="text-gold block">BIGGEST AI</span>
+          <span className="text-gold block">STARTUP</span>
+        </h1>
+
+        <p className="text-gray-300 max-w-2xl mx-auto mt-6">
+          JOIN INDIA'S NEXT REVOLUTIONARY AI STARTUP. BE A PART OF IT.
+          WE ARE BUILDING A NEW ERA OF INTELLIGENCE.
+        </p>
+
+        <div className="mt-10">
+          <a
+            href={formUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block px-10 py-4 hero-cta btn-gold font-semibold rounded-md"
+          >
+            INITIATE APPLICATION
+          </a>
+        </div>
       </div>
-
-      <h1 className="font-display text-[5rem] md:text-[7rem] leading-none mt-6 font-bold">
-        BUILD THE
-        <br />
-        <span className="text-gold">FUTURE OF AI</span>
-      </h1>
-
-      <p className="text-gray-400 max-w-xl mx-auto mt-6 text-lg">
-        Join India’s most ambitious AI startup and help build intelligence for the next decade.
-      </p>
-
-      <a
-        href={formUrl}
-        target="_blank"
-        className="mt-10 inline-block px-10 py-4 bg-gold text-black font-semibold text-lg rounded-xl hover:bg-white transition"
-      >
-        INITIATE APPLICATION
-      </a>
     </section>
   );
 }

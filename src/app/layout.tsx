@@ -1,8 +1,8 @@
-import "../styles/globals.css";
+import "./../styles/globals.css";
 
 export const metadata = {
   title: "Selin Ventures",
-  description: "Gemini-style UI built with Next.js",
+  description: "Join the biggest AI startup - Selin Ventures",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

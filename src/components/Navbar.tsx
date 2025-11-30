@@ -7,25 +7,18 @@ export default function Navbar() {
     "https://docs.google.com/forms/d/e/1FAIpQLSe9J9P-YN3-_uhEsMDG8iJxWExj6KnX_if8FTol4Fbes85WEQ/viewform";
 
   return (
-    <header className="w-full fixed top-0 left-0 z-40 bg-transparent">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="text-gold font-display text-2xl">
+    <header className="w-full fixed top-0 left-0 z-40 bg-black/40 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <div className="text-gold font-display text-2xl select-none">
           SELIN<span className="text-xs block text-gray-400">VENTURES</span>
         </div>
 
         <div className="flex items-center gap-4">
-          <a
-            href={formUrl}
-            target="_blank"
-            className="px-4 py-2 bg-gold text-black rounded shadow-lg"
-          >
+          <a href={formUrl} target="_blank" rel="noreferrer" className="px-4 py-2 btn-gold rounded hero-cta text-sm">
             APPLY NOW
           </a>
 
-          <button
-            onClick={() => setOpen(!open)}
-            className="w-10 h-10 flex items-center justify-center border border-white rounded"
-          >
+          <button onClick={() => setOpen(!open)} className="w-10 h-10 flex items-center justify-center border border-white rounded">
             <span className="block w-5 h-[2px] bg-white" />
             <span className="block w-5 h-[2px] bg-white mt-1" />
           </button>
@@ -42,3 +35,4 @@ export default function Navbar() {
     </header>
   );
 }
+
