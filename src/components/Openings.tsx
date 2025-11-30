@@ -1,7 +1,7 @@
 const openings = [
-  { title: "AI/ML ENGINEER", sub: "PYTHON, LLMS", seats: 2 },
-  { title: "BACKEND ARCHITECT", sub: "NODE, FIREBASE", seats: 2 },
-  { title: "FRONTEND / MOBILE", sub: "REACT, FLUTTER", seats: 2 }
+  { title: "AI/ML Engineer", sub: "Python, LLMs, RAG", seats: 2 },
+  { title: "Backend Architect", sub: "Node.js, Firebase, Cloud", seats: 2 },
+  { title: "Frontend / Mobile", sub: "React, Next.js, Flutter", seats: 2 },
 ];
 
 const formUrl =
@@ -9,20 +9,27 @@ const formUrl =
 
 export default function Openings() {
   return (
-    <section id="openings" className="py-16 px-6 max-w-6xl mx-auto">
-      <h3 className="text-3xl font-display text-center">CURRENT OPENINGS</h3>
+    <section id="openings" className="py-28 px-6 max-w-7xl mx-auto">
+      <h2 className="text-4xl font-display text-center">CURRENT OPENINGS</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
         {openings.map((o) => (
-          <div key={o.title} className="border border-gray-800 p-6">
-            <h4 className="text-lg font-bold">{o.title}</h4>
-            <div className="text-gray-500 text-xs mt-2">{o.sub}</div>
-            <div className="mt-4 flex justify-between items-center">
-              <span className="text-gold font-semibold">
-                {o.seats} SEATS
-              </span>
-              <a href={formUrl} target="_blank" className="underline">
-                APPLY
+          <div
+            key={o.title}
+            className="border border-white/10 bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition"
+          >
+            <h3 className="text-xl font-bold">{o.title}</h3>
+            <p className="text-gray-400 text-sm mt-1">{o.sub}</p>
+
+            <div className="mt-6 flex justify-between items-center">
+              <span className="text-gold font-semibold">{o.seats} Seats</span>
+
+              <a
+                href={formUrl}
+                target="_blank"
+                className="underline text-gray-300 hover:text-white"
+              >
+                Apply
               </a>
             </div>
           </div>
@@ -31,3 +38,4 @@ export default function Openings() {
     </section>
   );
 }
+

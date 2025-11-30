@@ -1,10 +1,26 @@
 export default function Governance() {
+  const points = [
+    "Extreme Ownership",
+    "High-Velocity Execution",
+    "Truth-Seeking Culture",
+    "AI-First Decision Making",
+  ];
+
   return (
-    <section id="governance" className="py-16 px-6 max-w-6xl mx-auto">
-      <h3 className="text-3xl font-display text-center">GOVERNANCE</h3>
-      <p className="text-gray-400 text-center mt-4">
-        The core principles of SELIN GROUP.
-      </p>
+    <section id="governance" className="py-24 px-6 max-w-6xl mx-auto">
+      <h2 className="text-4xl font-display text-center mb-12">GOVERNANCE</h2>
+
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {points.map((p) => (
+          <li
+            key={p}
+            className="border border-white/10 bg-white/5 p-6 rounded-xl text-lg text-gray-200"
+          >
+            {p}
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
+
