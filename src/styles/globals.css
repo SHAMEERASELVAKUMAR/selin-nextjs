@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #F4D06F;
+  --bg: #050505;
+}
+
+html, body {
+  background: radial-gradient(circle at 20% 80%, rgba(120,40,0,0.08), var(--bg));
+  color: white;
+}
+
+.font-display {
+  font-family: "Playfair Display", serif;
+}
